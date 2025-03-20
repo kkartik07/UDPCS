@@ -219,8 +219,8 @@ def main(args: argparse.Namespace):
     cs_update(val_loader_t,target_pll_loader,classifier)
     acc1_mdd = utils.validate(val_loader, classifier, args, device)
     print("MDD Best: ",acc1_mdd)
-    # for epoch in range(args.epochs):
-    for epoch in range(16, args.epochs):
+    # for epoch in range(16, args.epochs):
+    for epoch in range(args.epochs):
         print("PLL: ",pll)
         
         if pll == True:
