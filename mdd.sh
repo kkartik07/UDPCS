@@ -1,2 +1,2 @@
 # CUDA_VISIBLE_DEVICES=0 python3 UDPCS_MDD.py ./data/visda -d VisDA2017 -s Synthetic -t Real -a resnet101 --epochs 30 --bottleneck-dim 1024 --seed 0 --train-resizing cen.crop --per-class-eval -b 36 --log logs/VisDA2017
-CUDA_VISIBLE_DEVICES=0 python3 UDPCS_MDD.py ./data/visda -d VisDA2017 -s Synthetic -t Real -a resnet101 --epochs 5 --bottleneck-dim 1024 --seed 0 --train-resizing cen.crop --per-class-eval -b 36 --log logs/VisDA2017
+CUDA_VISIBLE_DEVICES=0 python3 UDPCS_MDD.py ./data/visda -d VisDA2017 -s Synthetic -t Real -a resnet101 --epochs 3 --bottleneck-dim 1024 --seed 0 --train-resizing cen.crop --per-class-eval -b 36 --log logs/VisDA2017
