@@ -85,13 +85,13 @@ def main(args: argparse.Namespace):
     lr_scheduler = LambdaLR(optimizer, lambda x: args.lr * (1. + args.lr_gamma * float(x)) ** (-args.lr_decay))
 
     # Load checkpoint from latest_UDPCS
-    checkpoint = torch.load(logger.get_checkpoint_path('latest_UDPCS'), map_location='cpu')
+    checkpoint = torch.load(logger.get_checkpoint_path('latest')[:-4]+'_UDPCS.pth', map_location='cpu')
     classifier.load_state_dict(checkpoint)
 
     best_acc1 = 0.
     pll = True
 
-    for epoch in range(16, 18):  # Resuming from epoch 16 to 17 (2 more epochs)
+    for epoch in range(15, 18):  # Training for 3 more epochs (15 to 17)
         print("PLL: ", pll)
         
         if pll:
