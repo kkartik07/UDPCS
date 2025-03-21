@@ -187,7 +187,7 @@ def main(args: argparse.Namespace):
 
     # resume from the best checkpoint
     if args.phase != 'train':
-        checkpoint = torch.load(logger.get_checkpoint_path('best'), map_location='cpu')
+        checkpoint = torch.load(logger.get_checkpoint_path('latest_UDPCS'), map_location='cpu')
         classifier.load_state_dict(checkpoint)
 
     # analysis the model
